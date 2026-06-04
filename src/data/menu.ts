@@ -14,7 +14,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "esp-2", name: "Espresso Macchiato",
     description: "Velvety espresso kissed with a dollop of steamed milk foam.",
-    price: 170, image: U("photo-1514432324607-a09d9b4aefda"), category: "espresso", tags: ["hot"],
+    price: 170, image: U("photo-1485808191679-5f86510681a2"), category: "espresso", tags: ["hot"],
   },
   {
     id: "esp-3", name: "Ristretto",
@@ -68,7 +68,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "cb-1", name: "Classic Cold Brew",
     description: "18-hour steeped single-origin cold brew. Smooth, low-acid, deeply refreshing.",
-    price: 220, image: U("photo-1517701550847-12e3749ceda0"), category: "cold-brew", tags: ["cold", "bestseller"], bestseller: true,
+    price: 220, image: U("photo-1461023058943-07fcbe16d735"), category: "cold-brew", tags: ["cold", "bestseller"], bestseller: true,
   },
   {
     id: "cb-2", name: "Salted Caramel Cold Brew",
@@ -88,7 +88,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "cb-5", name: "Vietnamese Iced Coffee",
     description: "Slow-drip dark roast over condensed milk — intensely sweet and bold.",
-    price: 230, image: U("photo-1514432324607-a09d9b4aefda"), category: "cold-brew", tags: ["cold"],
+    price: 230, image: U("photo-1485808191679-5f86510681a2"), category: "cold-brew", tags: ["cold"],
   },
 
   // ──── TEA ────
@@ -100,7 +100,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "tea-2", name: "Chai Masala",
     description: "House-blended spices simmered in milk — cardamom, cinnamon, ginger, and clove.",
-    price: 180, image: U("photo-1563639788-2c3e14e1af7d"), category: "tea", tags: ["hot"], bestseller: true,
+    price: 180, image: U("photo-1571934811356-5cc061b6821f"), category: "tea", tags: ["hot"], bestseller: true,
   },
   {
     id: "tea-3", name: "Earl Grey Lavender",
@@ -159,7 +159,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pas-5", name: "Pistachio Danish",
     description: "Flaky pastry filled with pistachio cream and topped with crushed pistachios.",
-    price: 170, image: U("photo-1555507036-ab1f4038024a"), category: "pastries", tags: [],
+    price: 170, image: U("photo-1509365390695-33aee754301f"), category: "pastries", tags: [],
   },
 
   // ──── BREAKFAST ────
@@ -259,7 +259,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "spc-3", name: "Affogato al Cioccolato",
     description: "Double espresso poured over artisan vanilla gelato with dark chocolate shavings.",
-    price: 310, image: U("photo-1514432324607-a09d9b4aefda"), category: "specials", tags: ["cold"],
+    price: 310, image: U("photo-1485808191679-5f86510681a2"), category: "specials", tags: ["cold"],
   },
   {
     id: "spc-4", name: "Saffron Honey Latte",
