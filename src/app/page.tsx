@@ -2,6 +2,8 @@
 
 import Hero from "@/components/sections/hero";
 import StatsStrip from "@/components/sections/stats-strip";
+import MarqueeStrip from "@/components/sections/marquee-strip";
+import ScrollVideo from "@/components/sections/scroll-video";
 import SignatureDrinks from "@/components/sections/signature-drinks";
 import MenuPreview from "@/components/sections/menu-preview";
 import OurStoryPreview from "@/components/sections/our-story-preview";
@@ -16,6 +18,8 @@ export default function Home() {
     <>
       <Hero />
       <StatsStrip />
+      <MarqueeStrip />
+      <ScrollVideo />
       <SignatureDrinks />
       <OurStoryPreview />
       <MenuPreview />

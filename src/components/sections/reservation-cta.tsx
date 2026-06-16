@@ -8,7 +8,7 @@ export default function ReservationCTA() {
   return (
     <section className="relative py-28 md:py-36 overflow-hidden">
       <VideoBackground
-        videoSrc="https://cdn.pixabay.com/video/2019/06/21/24634-343584498_large.mp4"
+        videoSrc="/videos/hero.mp4"
         posterSrc="https://images.unsplash.com/photo-1453614512568-c4024d13c247?auto=format&fit=crop&w=1920&q=80"
         overlayOpacity={0.6}
       />

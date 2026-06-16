@@ -9,7 +9,7 @@ export default function OurStoryPreview() {
     <section className="relative py-24 md:py-32 overflow-hidden">
       {/* Video / Image background */}
       <VideoBackground
-        videoSrc="https://cdn.pixabay.com/video/2020/07/30/45349-445192836_large.mp4"
+        videoSrc="/videos/craft.mp4"
         posterSrc="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1920&q=80"
         overlayOpacity={0.7}
       />

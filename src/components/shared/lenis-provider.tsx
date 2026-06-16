@@ -15,6 +15,9 @@ export default function LenisProvider({
       smoothWheel: true,
     });
 
+    // Expose for anchor links / programmatic scrolling helpers.
+    (window as unknown as { lenis?: Lenis }).lenis = lenis;
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);

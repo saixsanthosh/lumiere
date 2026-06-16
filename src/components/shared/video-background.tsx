@@ -17,11 +17,13 @@ interface Props {
   showMuteToggle?: boolean;
 }
 
-/* Free stock café/coffee videos — multiple fallbacks */
+/* Café/coffee footage — bundled local file first, Pexels CDN as fallbacks.
+   CAFÉ OWNER: drop your own clip at /public/videos/hero.mp4 to replace this. */
 const VIDEO_SOURCES = [
-  "https://cdn.pixabay.com/video/2024/02/18/200765-913830382_large.mp4",
-  "https://cdn.pixabay.com/video/2020/07/30/45349-445192836_large.mp4",
-  "https://cdn.pixabay.com/video/2019/06/21/24634-343584498_large.mp4",
+  "/videos/hero.mp4",
+  "https://videos.pexels.com/video-files/1793151/1793151-hd_1920_1080_30fps.mp4",
+  "https://videos.pexels.com/video-files/6166867/6166867-hd_1920_1080_25fps.mp4",
+  "https://videos.pexels.com/video-files/855391/855391-hd_1920_1080_25fps.mp4",
 ];
 
 export default function VideoBackground({

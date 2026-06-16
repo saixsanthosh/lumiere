@@ -1,6 +1,17 @@
 # LUMIERE — Premium Artisan Cafe Website
 
-A stunning, fully-functional premium cafe website built with Next.js 14, TypeScript, and TailwindCSS. Cinematic video backgrounds, online ordering with cart, table reservations, blog, events, loyalty rewards, gift cards, and more — all with a warm artisan luxury aesthetic.
+A stunning, fully-functional premium cafe website built with Next.js 14, TypeScript, and TailwindCSS. Scroll-scrubbed cinematic video, live glassmorphism, a custom magnetic cursor, online ordering with cart, table reservations, blog, events, loyalty rewards, gift cards, and more — all with a warm artisan luxury aesthetic.
+
+## ✨ Signature "God-Tier" Experience
+
+- **Scroll-Scrubbed Cinematic Video** — An Apple-style section where the coffee film plays *forward/backward with your scroll*, with frosted-glass captions revealing in sync ("From bean to cup"). Video time is driven by scroll progress with a smoothing lerp and is paused off-screen for performance.
+- **Live Glassmorphism Design System** — Layered frosted-glass surfaces (`.glass`, `.glass-gold`, `.glass-dark`, `.glass-card`) with inner highlights, specular sheen sweeps, and warm gold tinting across the nav, cards, badges and CTAs.
+- **Custom Magnetic Cursor** — A precise gold dot + a soft lagging ring that expands over interactive elements (desktop only, blend-mode aware, disabled under reduced-motion).
+- **Luxury Preloader** — A wordmark reveal with an animated counter and splitting espresso curtains (shows once per session).
+- **Kinetic Hero** — Mouse-parallax layers, a drifting aurora mesh, film grain, a word-by-word blur-in headline, and magnetic buttons.
+- **3D Tilt Glass Cards** — Signature drinks tilt in 3D toward the cursor with a tracking gold glare.
+- **Gold Scroll-Progress Bar** + **infinite dual marquee** brand strip.
+- **Bundled, self-hosted coffee video** (`/public/videos`) for instant, reliable playback — no dead third-party links.
 
 ## Features
 

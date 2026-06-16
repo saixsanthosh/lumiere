@@ -86,6 +86,25 @@ const config: Config = {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-8px)" },
         },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "spin-slow": {
+          to: { transform: "rotate(360deg)" },
+        },
+        "float-y": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-14px)" },
+        },
+        "gradient-x": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s ease-out",
@@ -94,6 +113,11 @@ const config: Config = {
         float: "float 3s ease-in-out infinite",
         pulse_glow: "pulse_glow 2s ease-in-out infinite",
         bounce_slow: "bounce_slow 2s ease-in-out infinite",
+        marquee: "marquee 32s linear infinite",
+        "marquee-reverse": "marquee-reverse 32s linear infinite",
+        "spin-slow": "spin-slow 6s linear infinite",
+        "float-y": "float-y 6s ease-in-out infinite",
+        "gradient-x": "gradient-x 6s ease-in-out infinite",
       },
     },
   },

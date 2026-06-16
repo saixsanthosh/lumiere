@@ -62,7 +62,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--mocha);
+  background: linear-gradient(var(--mocha), var(--caramel));
   border-radius: 4px;
 }
 
@@ -103,11 +103,201 @@ body {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-caramel to-gold-bright;
   }
 
+  /* ───────────────────────── GLASSMORPHISM SYSTEM ───────────────────────── */
+  /* Neutral frosted glass — light, premium, layered with inner highlight */
+  .glass {
+    background: linear-gradient(
+      135deg,
+      rgba(245, 239, 227, 0.10) 0%,
+      rgba(245, 239, 227, 0.03) 100%
+    );
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(245, 239, 227, 0.14);
+    box-shadow:
+      0 8px 32px rgba(12, 8, 4, 0.35),
+      inset 0 1px 0 rgba(245, 239, 227, 0.18),
+      inset 0 -1px 0 rgba(12, 8, 4, 0.20);
+  }
+
+  /* Warm gold-tinted glass — the signature café material */
+  .glass-gold {
+    background: linear-gradient(
+      135deg,
+      rgba(201, 162, 75, 0.14) 0%,
+      rgba(201, 162, 75, 0.04) 50%,
+      rgba(28, 18, 10, 0.10) 100%
+    );
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(201, 162, 75, 0.28);
+    box-shadow:
+      0 12px 40px rgba(12, 8, 4, 0.40),
+      inset 0 1px 0 rgba(232, 201, 122, 0.35),
+      inset 0 -1px 0 rgba(12, 8, 4, 0.25);
+  }
+
+  /* Strong dark glass — for nav / floating chrome over bright video */
   .glass-dark {
-    background: rgba(28, 18, 10, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: linear-gradient(
+      135deg,
+      rgba(28, 18, 10, 0.72) 0%,
+      rgba(28, 18, 10, 0.55) 100%
+    );
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
     border: 1px solid var(--border);
+    box-shadow:
+      0 8px 32px rgba(12, 8, 4, 0.45),
+      inset 0 1px 0 rgba(245, 239, 227, 0.10);
+  }
+
+  /* Card-weight glass with hover lift handled in JS/utility classes */
+  .glass-card {
+    position: relative;
+    background: linear-gradient(
+      135deg,
+      rgba(46, 29, 17, 0.55) 0%,
+      rgba(28, 18, 10, 0.35) 100%
+    );
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(201, 162, 75, 0.16);
+    box-shadow:
+      0 10px 36px rgba(12, 8, 4, 0.35),
+      inset 0 1px 0 rgba(245, 239, 227, 0.10);
+  }
+
+  /* Specular sheen that sweeps across a glass element on hover */
+  .glass-sheen {
+    position: relative;
+    overflow: hidden;
+  }
+  .glass-sheen::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(245, 239, 227, 0.18) 50%,
+      transparent 100%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  .glass-sheen:hover::before {
+    left: 130%;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Animated aurora / mesh gradient — ambient warm light behind sections */
+  .aurora-bg {
+    background:
+      radial-gradient(40% 50% at 20% 30%, rgba(201, 162, 75, 0.18), transparent 60%),
+      radial-gradient(45% 55% at 80% 20%, rgba(181, 86, 46, 0.14), transparent 60%),
+      radial-gradient(50% 60% at 60% 80%, rgba(232, 201, 122, 0.12), transparent 60%),
+      radial-gradient(40% 50% at 10% 90%, rgba(124, 138, 106, 0.10), transparent 60%);
+    background-size: 200% 200%;
+    animation: aurora 18s ease-in-out infinite;
+  }
+
+  /* Film-grain / noise overlay — adds analog texture over flat areas */
+  .grain-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 180px 180px;
+  }
+
+  /* Animated conic shine for borders / rings */
+  .conic-shine {
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      rgba(201, 162, 75, 0.0) 60deg,
+      rgba(232, 201, 122, 0.8) 120deg,
+      rgba(201, 162, 75, 0.0) 180deg,
+      transparent 360deg
+    );
+    animation: spin-slow 6s linear infinite;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .mask-fade-y {
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 12%, black 88%, transparent);
+  }
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  /* Long animated gold text gradient (shifts across the fill) */
+  .text-gradient-gold-anim {
+    background: linear-gradient(
+      100deg,
+      var(--caramel) 0%,
+      var(--gold-bright) 25%,
+      var(--cream) 50%,
+      var(--gold-bright) 75%,
+      var(--caramel) 100%
+    );
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: text-shine 6s linear infinite;
+  }
+}
+
+/* ───────────────────────── KEYFRAMES ───────────────────────── */
+@keyframes aurora {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes text-shine {
+  to { background-position: 220% center; }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ───────────────────────── CUSTOM CURSOR ───────────────────────── */
+/* Hide native cursor only on fine-pointer (desktop) devices when enabled */
+@media (hover: hover) and (pointer: fine) {
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: none !important;
   }
 }
 
@@ -119,5 +309,10 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .aurora-bg { animation: none !important; }
+  html.has-custom-cursor,
+  html.has-custom-cursor * {
+    cursor: auto !important;
   }
 }
