@@ -4,7 +4,8 @@ import Hero from "@/components/sections/hero";
 import StatsStrip from "@/components/sections/stats-strip";
 import MarqueeStrip from "@/components/sections/marquee-strip";
 import ScrollVideo from "@/components/sections/scroll-video";
-import SignatureDrinks from "@/components/sections/signature-drinks";
+import SignatureCarousel from "@/components/sections/signature-carousel";
+import RevealSpotlight from "@/components/sections/reveal-spotlight";
 import MenuPreview from "@/components/sections/menu-preview";
 import OurStoryPreview from "@/components/sections/our-story-preview";
 import FeaturesGrid from "@/components/sections/features-grid";
@@ -20,7 +21,8 @@ export default function Home() {
       <StatsStrip />
       <MarqueeStrip />
       <ScrollVideo />
-      <SignatureDrinks />
+      <SignatureCarousel />
+      <RevealSpotlight />
       <OurStoryPreview />
       <MenuPreview />
       <FeaturesGrid />

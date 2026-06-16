@@ -7,7 +7,6 @@ import ToastContainer from "@/components/ui/toast";
 import WhatsAppFloat from "@/components/shared/whatsapp-float";
 import LenisProvider from "@/components/shared/lenis-provider";
 import Preloader from "@/components/shared/preloader";
-import CustomCursor from "@/components/shared/custom-cursor";
 import ScrollProgress from "@/components/shared/scroll-progress";
 
 export default function ClientLayout({
@@ -18,7 +17,6 @@ export default function ClientLayout({
   return (
     <LenisProvider>
       <Preloader />
-      <CustomCursor />
       <ScrollProgress />
       <Navbar />
       <main className="min-h-screen">{children}</main>

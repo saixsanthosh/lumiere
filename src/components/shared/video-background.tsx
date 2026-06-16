@@ -15,6 +15,9 @@ interface Props {
   overlayOpacity?: number;
   className?: string;
   showMuteToggle?: boolean;
+  /** Render only the poster image — no <video>. Used for below-the-fold
+   *  sections to keep the page light (fewer simultaneous video decodes). */
+  imageOnly?: boolean;
 }
 
 /* Café/coffee footage — bundled local file first, Pexels CDN as fallbacks.
@@ -33,7 +36,9 @@ export default function VideoBackground({
   overlayOpacity = 0.55,
   className,
   showMuteToggle = false,
+  imageOnly = false,
 }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
@@ -48,11 +53,24 @@ export default function VideoBackground({
     return () => mq.removeEventListener("change", handler);
   }, []);
 
+  // Play only while on-screen; pause when scrolled away. Pausing off-screen
+  // video decode is the single biggest CPU saving on a multi-video page.
   useEffect(() => {
-    if (videoRef.current && !prefersReducedMotion) {
-      videoRef.current.play().catch(() => {});
-    }
-  }, [prefersReducedMotion, videoLoaded]);
+    if (imageOnly || prefersReducedMotion) return;
+    const video = videoRef.current;
+    const container = containerRef.current;
+    if (!video || !container) return;
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { threshold: 0.05 }
+    );
+    io.observe(container);
+    return () => io.disconnect();
+  }, [imageOnly, prefersReducedMotion, videoLoaded]);
 
   const handleVideoError = () => {
     if (currentSrc < VIDEO_SOURCES.length - 1) {
@@ -68,29 +86,29 @@ export default function VideoBackground({
   };
 
   const src = videoSrc || VIDEO_SOURCES[currentSrc];
+  const showVideo = !imageOnly && !prefersReducedMotion;
 
   return (
-    <div className={cn("absolute inset-0 overflow-hidden", className)}>
+    <div ref={containerRef} className={cn("absolute inset-0 overflow-hidden", className)}>
       {/* Poster image always present as base layer */}
       <img
         src={posterSrc}
         alt=""
         className={cn(
           "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
-          videoLoaded && !prefersReducedMotion ? "opacity-0" : "opacity-100"
+          videoLoaded && showVideo ? "opacity-0" : "opacity-100"
         )}
       />
 
-      {/* Video layer */}
-      {!prefersReducedMotion && (
+      {/* Video layer (lazy: metadata only until on-screen) */}
+      {showVideo && (
         <video
           ref={videoRef}
-          autoPlay
           muted
           loop
           playsInline
-          preload="auto"
-          onCanPlayThrough={() => setVideoLoaded(true)}
+          preload="metadata"
+          onCanPlay={() => setVideoLoaded(true)}
           onError={handleVideoError}
           className={cn(
             "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
@@ -114,20 +132,18 @@ export default function VideoBackground({
                 rgba(28,18,10,${overlayOpacity + 0.2}) 100%)`,
             }}
           />
-          {/* Vignette */}
           <div
             className="absolute inset-0"
             style={{
               background: "radial-gradient(ellipse at center, transparent 40%, rgba(28,18,10,0.4) 100%)",
             }}
           />
-          {/* Warm color tint */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#2E1D11]/20 via-transparent to-[#4A3120]/20" />
         </>
       )}
 
       {/* Mute toggle */}
-      {showMuteToggle && !prefersReducedMotion && (
+      {showMuteToggle && showVideo && (
         <button
           onClick={toggleMute}
           className="absolute bottom-6 right-20 z-20 p-3 rounded-full glass-dark

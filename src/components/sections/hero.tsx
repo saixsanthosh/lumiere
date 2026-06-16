@@ -10,8 +10,8 @@ import Magnetic from "@/components/shared/magnetic";
 /* Floating decorative particles */
 function FloatingParticles() {
   return (
-    <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden">
-      {Array.from({ length: 22 }).map((_, i) => (
+    <div className="absolute inset-0 z-[5] pointer-events-none overflow-hidden hidden sm:block">
+      {Array.from({ length: 12 }).map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-caramel/20 rounded-full"
@@ -69,7 +69,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       onMouseMove={onMouseMove}
-      className="relative h-screen min-h-[750px] flex items-center justify-center overflow-hidden"
+      className="relative h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden"
     >
       <VideoBackground showMuteToggle />
 
@@ -156,7 +156,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="text-cream/60 text-lg md:text-xl lg:text-2xl font-body max-w-2xl mx-auto leading-relaxed font-light"
+          className="text-cream/80 text-base sm:text-lg md:text-xl lg:text-2xl font-body max-w-2xl mx-auto leading-relaxed font-light"
         >
           Single-origin beans, handcrafted beverages, and a warm ambiance where
           every sip is an experience worth savoring.
@@ -194,7 +194,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.7 }}
-          className="mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-cream/30 text-xs font-body tracking-widest uppercase"
+          className="mt-10 md:mt-14 flex flex-wrap items-center justify-center gap-x-6 sm:gap-x-8 gap-y-3 text-cream/55 text-[11px] sm:text-xs font-body tracking-widest uppercase"
         >
           <span>Open Daily</span>
           <span className="w-1 h-1 rounded-full bg-caramel/40" />
@@ -216,7 +216,7 @@ export default function Hero() {
           transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center gap-3"
         >
-          <span className="text-cream/30 text-[10px] font-body tracking-[0.3em] uppercase">
+          <span className="text-cream/60 text-[10px] font-body tracking-[0.3em] uppercase">
             Scroll to Explore
           </span>
           <div className="w-5 h-8 border border-cream/20 rounded-pill flex justify-center pt-1.5">
@@ -231,12 +231,12 @@ export default function Hero() {
 
       {/* Side decorative text */}
       <div className="hidden xl:block absolute left-6 top-1/2 -translate-y-1/2 z-10">
-        <p className="text-cream/10 text-[10px] font-body tracking-[0.5em] uppercase" style={{ writingMode: "vertical-lr" }}>
+        <p className="text-cream/25 text-[10px] font-body tracking-[0.5em] uppercase" style={{ writingMode: "vertical-lr" }}>
           Est. 2014 — Bengaluru
         </p>
       </div>
       <div className="hidden xl:block absolute right-6 top-1/2 -translate-y-1/2 z-10">
-        <p className="text-cream/10 text-[10px] font-body tracking-[0.5em] uppercase" style={{ writingMode: "vertical-lr" }}>
+        <p className="text-cream/25 text-[10px] font-body tracking-[0.5em] uppercase" style={{ writingMode: "vertical-lr" }}>
           Artisan Coffee & Fine Dining
         </p>
       </div>

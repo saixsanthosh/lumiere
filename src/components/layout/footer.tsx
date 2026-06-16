@@ -182,42 +182,45 @@ export default function Footer() {
           <p className="text-text-muted-dark/60 text-xs font-body tracking-wide">
             © {new Date().getFullYear()} Lumière Café. All rights reserved.
           </p>
-          <div className="flex items-center gap-3">
-            <span className="text-text-muted-dark/50 text-xs" style={{ fontFamily: "Marcellus, serif" }}>
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+            <span className="text-text-muted-dark/55 text-xs" style={{ fontFamily: "Marcellus, serif" }}>
               Designed & Developed by B SAI SANTHOSH
             </span>
-            <div className="flex items-center gap-2">
-              <a
-                href="mailto:saisanthosh102030@gmail.com"
-                className="text-text-muted-dark/40 hover:text-caramel transition-colors"
-                aria-label="Email developer"
-              >
-                <Mail size={13} />
-              </a>
-              <a
-                href="tel:+918925075593"
-                className="text-text-muted-dark/40 hover:text-caramel transition-colors"
-                aria-label="Call developer"
-              >
-                <Phone size={13} />
-              </a>
+            <div className="flex items-center gap-3 text-xs font-body">
               <a
                 href="https://instagram.com/saixsanthosh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted-dark/40 hover:text-caramel transition-colors"
-                aria-label="Developer Instagram"
+                className="inline-flex items-center gap-1.5 text-caramel/80 hover:text-gold-bright transition-colors"
+                aria-label="Developer Instagram @saixsanthosh"
               >
                 <InstagramIcon width={13} height={13} />
+                @saixsanthosh
+              </a>
+              <span className="h-3 w-px bg-caramel/20" />
+              <a
+                href="tel:+918925075593"
+                className="inline-flex items-center gap-1.5 text-caramel/80 hover:text-gold-bright transition-colors"
+                aria-label="Call B Sai Santhosh"
+              >
+                <Phone size={12} />
+                +91 89250 75593
               </a>
               <a
                 href="https://wa.me/918925075593"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-muted-dark/40 hover:text-caramel transition-colors"
+                className="text-text-muted-dark/50 hover:text-caramel transition-colors"
                 aria-label="Developer WhatsApp"
               >
-                <MessageCircle size={13} />
+                <MessageCircle size={14} />
+              </a>
+              <a
+                href="mailto:saisanthosh102030@gmail.com"
+                className="text-text-muted-dark/50 hover:text-caramel transition-colors"
+                aria-label="Email developer"
+              >
+                <Mail size={14} />
               </a>
             </div>
           </div>
