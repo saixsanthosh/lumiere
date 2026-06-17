@@ -14,13 +14,12 @@ const timeline = [
   { year: "2026", title: "The Future", text: "New locations, a roastery café, and a mission to bring artisan coffee to every corner of the city." },
 ];
 
-/* CAFÉ OWNER: drop the three photos in /public/team as 1.jpg, 2.jpg, 3.jpg
-   (1 = Sai, 2 = Cindy, 3 = Sushmeetha). If a photo is missing, an elegant
+/* Team photos live in /public/team. If a photo is missing, an elegant
    gold-initials placeholder shows instead. */
 const team = [
-  { name: "SAI SANTHOSH", image: "/team/1.jpg", instagram: "saixsanthosh", phone: "8925075593" },
-  { name: "CINDY", image: "/team/2.jpg", instagram: "cindy.zi", phone: "9148239263" },
-  { name: "SUSHMEETHA", image: "/team/3.jpg", instagram: "sushmii_5", phone: "9094844748" },
+  { name: "SAI SANTHOSH", image: "/team/saisanthosh.png", instagram: "saixsanthosh", phone: "8925075593" },
+  { name: "CINDY", image: "/team/cindy.png", instagram: "cindy.zi", phone: "9148239263" },
+  { name: "SUSHMEETHA", image: "/team/sushmeetha.jpeg", instagram: "sushmii_5", phone: "9094844748" },
 ];
 
 const initials = (name: string) =>
