@@ -31,6 +31,20 @@ export default function CartPage() {
 
   const handleCheckout = (e: React.FormEvent) => {
     e.preventDefault();
+    // Generate the order token the café calls out when the order is ready.
+    const order = {
+      token: `LUM-${Math.floor(1000 + Math.random() * 9000)}`,
+      queue: Math.floor(10 + Math.random() * 89), // short number called at the counter
+      orderType,
+      total: getTotal(),
+      name: formData.name,
+      at: Date.now(),
+    };
+    try {
+      sessionStorage.setItem("lumiere_order", JSON.stringify(order));
+    } catch {
+      /* sessionStorage unavailable — confirmation falls back to a fresh token */
+    }
     addToast("Order placed successfully!", "success");
     clearCart();
     router.push("/order-confirmation");

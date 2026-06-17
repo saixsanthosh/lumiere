@@ -70,8 +70,8 @@ export default function Footer() {
                 <div className="flex items-start gap-3">
                   <MapPin size={16} className="text-caramel mt-1 shrink-0" />
                   <p className="text-text-muted-dark text-sm font-body leading-relaxed">
-                    42 Artisan Lane, Indiranagar<br />
-                    Bengaluru, Karnataka 560038
+                    No. 1208, 2nd Avenue, Anna Nagar<br />
+                    Chennai, Tamil Nadu 600040
                   </p>
                 </div>
                 <div className="flex items-center gap-3">

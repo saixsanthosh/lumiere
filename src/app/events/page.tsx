@@ -65,7 +65,7 @@ export default function EventsPage() {
                         <span className="flex items-center gap-1.5"><Calendar size={12} /> {new Date(event.date).toLocaleDateString("en-IN", { weekday: "long", month: "long", day: "numeric" })}</span>
                         <span className="flex items-center gap-1.5"><Clock size={12} /> {event.time}</span>
                         <span className="flex items-center gap-1.5"><Users size={12} /> {event.spotsLeft} spots left</span>
-                        <span className="flex items-center gap-1.5"><MapPin size={12} /> Lumière, Indiranagar</span>
+                        <span className="flex items-center gap-1.5"><MapPin size={12} /> Lumière, Anna Nagar</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between mt-5 pt-4 border-t border-[rgba(201,162,75,0.08)]">

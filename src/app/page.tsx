@@ -13,6 +13,7 @@ import Testimonials from "@/components/sections/testimonials";
 import InstagramFeed from "@/components/sections/instagram-feed";
 import Newsletter from "@/components/sections/newsletter";
 import ReservationCTA from "@/components/sections/reservation-cta";
+import DeliveryPartners from "@/components/sections/delivery-partners";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <FeaturesGrid />
       <Testimonials />
       <ReservationCTA />
+      <DeliveryPartners />
       <InstagramFeed />
       <Newsletter />
     </>

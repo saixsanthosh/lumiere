@@ -71,7 +71,7 @@ export default function Hero() {
       onMouseMove={onMouseMove}
       className="relative h-[100svh] min-h-[600px] flex items-center justify-center overflow-hidden"
     >
-      <VideoBackground showMuteToggle />
+      <VideoBackground />
 
       {/* Animated aurora glow that drifts with the cursor */}
       <motion.div
@@ -200,7 +200,7 @@ export default function Hero() {
           <span className="w-1 h-1 rounded-full bg-caramel/40" />
           <span>7 AM — 11 PM</span>
           <span className="w-1 h-1 rounded-full bg-caramel/40" />
-          <span>Indiranagar, Bengaluru</span>
+          <span>Anna Nagar, Chennai</span>
         </motion.div>
       </motion.div>
 
@@ -232,7 +232,7 @@ export default function Hero() {
       {/* Side decorative text */}
       <div className="hidden xl:block absolute left-6 top-1/2 -translate-y-1/2 z-10">
         <p className="text-cream/25 text-[10px] font-body tracking-[0.5em] uppercase" style={{ writingMode: "vertical-lr" }}>
-          Est. 2014 — Bengaluru
+          Est. 2014 — Chennai
         </p>
       </div>
       <div className="hidden xl:block absolute right-6 top-1/2 -translate-y-1/2 z-10">

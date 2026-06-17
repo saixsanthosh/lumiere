@@ -1,23 +1,29 @@
 "use client";
 
+import { Phone } from "lucide-react";
 import { AnimateOnScroll, StaggerContainer, StaggerItem } from "@/components/shared/motion-wrapper";
 import SectionHeading from "@/components/shared/section-heading";
+import { InstagramIcon } from "@/components/ui/icons";
 
 const timeline = [
-  { year: "2014", title: "The First Roast", text: "A tiny roastery in a Bengaluru garage, a second-hand roaster, and a dream of perfect coffee." },
-  { year: "2016", title: "First Café Opens", text: "Lumière Indiranagar welcomed its first guests — 20 seats, one espresso machine, and infinite passion." },
+  { year: "2014", title: "The First Roast", text: "A tiny roastery in a Chennai garage, a second-hand roaster, and a dream of perfect coffee." },
+  { year: "2016", title: "First Café Opens", text: "Lumière Anna Nagar welcomed its first guests — 20 seats, one espresso machine, and infinite passion." },
   { year: "2018", title: "Direct Trade", text: "We flew to Ethiopia and Colombia to build relationships with the farmers who grow our beans." },
   { year: "2020", title: "Community Hub", text: "Live music nights, latte art workshops, and cupping sessions turned Lumière into a cultural gathering place." },
   { year: "2023", title: "Online Ordering", text: "We launched our digital platform so every neighborhood could experience Lumière at home." },
   { year: "2026", title: "The Future", text: "New locations, a roastery café, and a mission to bring artisan coffee to every corner of the city." },
 ];
 
+/* CAFÉ OWNER: drop the three photos in /public/team with these exact filenames.
+   If a photo is missing, an elegant initials placeholder shows instead. */
 const team = [
-  { name: "Arjun Rao", role: "Founder & Head Roaster", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" },
-  { name: "Priya Desai", role: "Head Barista & Trainer", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" },
-  { name: "Miguel Torres", role: "Sourcing Director", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80" },
-  { name: "Anya Krishnan", role: "Pastry Chef", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80" },
+  { name: "SAI SANTHOSH", image: "/team/sai-santhosh.jpg", instagram: "saixsanthosh", phone: "8925075593" },
+  { name: "CINDY", image: "/team/cindy.jpg", instagram: "cindy.zi", phone: "9148239263" },
+  { name: "SUSHMEETHA", image: "/team/sushmeetha.jpg", instagram: "sushmii_5", phone: "9094844748" },
 ];
+
+const initials = (name: string) =>
+  name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
 
 const values = [
   { title: "Craft Over Speed", text: "Every cup is made to order. We never pre-batch, never rush, never compromise." },
@@ -67,7 +73,7 @@ export default function AboutPage() {
               <p className="text-text-muted-dark font-body leading-relaxed">
                 Our founder Arjun Rao left a corporate career in 2014 to chase a dream. Armed with
                 a battered Probat roaster and an obsessive love for single-origin beans, he began
-                roasting in his garage. Twelve years later, Lumière is Bengaluru&apos;s most beloved
+                roasting in his garage. Twelve years later, Lumière is Chennai&apos;s most beloved
                 artisan café — but the philosophy has never changed: source honestly, roast carefully,
                 serve lovingly.
               </p>
@@ -121,18 +127,38 @@ export default function AboutPage() {
       <section className="py-20 bg-roasted">
         <div className="max-w-5xl mx-auto section-padding">
           <SectionHeading subtitle="The People" title="Meet Our Team" />
-          <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
             {team.map((member) => (
               <StaggerItem key={member.name}>
                 <div className="text-center group">
-                  <div className="overflow-hidden rounded-lg mb-4">
-                    <img src={member.image} alt={member.name}
-                         className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105" />
+                  <div className="relative mb-4 aspect-[3/4] overflow-hidden rounded-2xl glass-card flex items-center justify-center">
+                    <span className="absolute font-display text-6xl text-caramel/30 select-none">
+                      {initials(member.name)}
+                    </span>
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = "0"; }}
+                      className="relative z-10 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
-                  <h3 className="font-heading text-base text-cream group-hover:text-caramel transition-colors">
+                  <h3 className="font-heading text-lg text-cream group-hover:text-caramel transition-colors tracking-wide">
                     {member.name}
                   </h3>
-                  <p className="text-text-muted-dark text-xs font-body mt-1">{member.role}</p>
+                  <a
+                    href={`https://instagram.com/${member.instagram}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-flex items-center justify-center gap-1.5 text-caramel/80 hover:text-gold-bright text-sm font-body"
+                  >
+                    <InstagramIcon width={14} height={14} /> @{member.instagram}
+                  </a>
+                  <a
+                    href={`tel:+91${member.phone}`}
+                    className="mt-1 flex items-center justify-center gap-1.5 text-text-muted-dark hover:text-caramel text-xs font-body"
+                  >
+                    <Phone size={12} /> +91 {member.phone}
+                  </a>
                 </div>
               </StaggerItem>
             ))}

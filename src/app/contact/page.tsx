@@ -46,9 +46,9 @@ export default function ContactPage() {
                     <div>
                       <p className="text-cream text-sm font-body font-medium">Address</p>
                       <p className="text-text-muted-dark text-sm font-body">
-                        42 Artisan Lane, Indiranagar<br />Bengaluru, Karnataka 560038
+                        No. 1208, 2nd Avenue, Anna Nagar<br />Chennai, Tamil Nadu 600040
                       </p>
-                      <a href="https://maps.google.com/?q=Indiranagar+Bengaluru" target="_blank" rel="noopener noreferrer"
+                      <a href="https://maps.google.com/?q=Anna+Nagar+Chennai" target="_blank" rel="noopener noreferrer"
                          className="inline-flex items-center gap-1 text-caramel text-xs font-body mt-1 hover:underline">
                         Get Directions <ExternalLink size={10} />
                       </a>
@@ -93,10 +93,10 @@ export default function ContactPage() {
             <AnimateOnScroll delay={0.1}>
               <div className="rounded-lg overflow-hidden border border-[rgba(201,162,75,0.08)] h-64">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0091!2d77.6409!3d12.9784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzQyLjIiTiA3N8KwMzgnMjcuMiJF!5e0!3m2!1sen!2sin!4v1"
+                  src="https://maps.google.com/maps?q=Anna%20Nagar%2C%20Chennai&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   width="100%" height="100%" style={{ border: 0 }}
                   allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
-                  title="Lumière location"
+                  title="Lumière — Anna Nagar, Chennai"
                 />
               </div>
             </AnimateOnScroll>

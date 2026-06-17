@@ -1,6 +1,6 @@
 import type { MenuItem } from "@/types";
 
-/* All images use verified Unsplash photo IDs with proper crop params */
+/* All images use verified Unsplash photo IDs (each item has a UNIQUE image). */
 const U = (id: string, w = 600) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=80`;
 
@@ -24,7 +24,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "esp-4", name: "Doppio",
     description: "A full-bodied double espresso with notes of dark chocolate and caramel.",
-    price: 180, image: U("photo-1485808191679-5f86510681a2"), category: "espresso", tags: ["hot"],
+    price: 180, image: U("photo-1510707577719-ae7c14805e3a"), category: "espresso", tags: ["hot"],
   },
 
   // ──── COFFEE ────
@@ -36,7 +36,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "cof-2", name: "Caramel Macchiato",
     description: "Layered vanilla milk, espresso, and house-made caramel drizzle.",
-    price: 240, image: U("photo-1485808191679-5f86510681a2"), category: "coffee", tags: ["hot", "bestseller"], bestseller: true,
+    price: 240, image: U("photo-1561882468-9110e03e0f78"), category: "coffee", tags: ["hot", "bestseller"], bestseller: true,
   },
   {
     id: "cof-3", name: "Flat White",
@@ -46,7 +46,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "cof-4", name: "Hazelnut Latte",
     description: "Creamy espresso latte infused with toasted hazelnut syrup and a nutty finish.",
-    price: 250, image: U("photo-1461023058943-07fcbe16d735"), category: "coffee", tags: ["hot"],
+    price: 250, image: U("photo-1541167760496-1628856ab772"), category: "coffee", tags: ["hot"],
   },
   {
     id: "cof-5", name: "Mocha Royale",
@@ -83,12 +83,12 @@ export const menuItems: MenuItem[] = [
   {
     id: "cb-4", name: "Iced Mocha",
     description: "Chilled espresso, dark chocolate, cold milk, and crushed ice.",
-    price: 240, image: U("photo-1461023058943-07fcbe16d735"), category: "cold-brew", tags: ["cold"],
+    price: 240, image: U("photo-1534778101976-62847782c213"), category: "cold-brew", tags: ["cold"],
   },
   {
     id: "cb-5", name: "Vietnamese Iced Coffee",
     description: "Slow-drip dark roast over condensed milk — intensely sweet and bold.",
-    price: 230, image: U("photo-1485808191679-5f86510681a2"), category: "cold-brew", tags: ["cold"],
+    price: 230, image: U("photo-1517701550927-30cf4ba1dba5"), category: "cold-brew", tags: ["cold"],
   },
 
   // ──── TEA ────
@@ -105,7 +105,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "tea-3", name: "Earl Grey Lavender",
     description: "Bergamot-scented black tea with French lavender and a touch of honey.",
-    price: 200, image: U("photo-1571934811356-5cc061b6821f"), category: "tea", tags: ["hot"],
+    price: 200, image: U("photo-1536256263959-770b48d82b0a"), category: "tea", tags: ["hot"],
   },
   {
     id: "tea-4", name: "Iced Peach Green Tea",
@@ -134,6 +134,11 @@ export const menuItems: MenuItem[] = [
     description: "Roasted peanut butter, ripe banana, oat milk, and cacao nibs.",
     price: 290, image: U("photo-1577805947697-89e18249d767"), category: "smoothies", tags: ["cold", "vegan"],
   },
+  {
+    id: "sm-5", name: "Strawberry Banana Smoothie",
+    description: "Sun-ripe strawberries and banana whipped with creamy yogurt and honey.",
+    price: 280, image: U("photo-1466978913421-dad2ebd01d17"), category: "smoothies", tags: ["cold", "gluten-free"], isNew: true,
+  },
 
   // ──── PASTRIES ────
   {
@@ -159,7 +164,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pas-5", name: "Pistachio Danish",
     description: "Flaky pastry filled with pistachio cream and topped with crushed pistachios.",
-    price: 170, image: U("photo-1509365390695-33aee754301f"), category: "pastries", tags: [],
+    price: 170, image: U("photo-1600271886742-f049cd451bba"), category: "pastries", tags: [],
   },
 
   // ──── BREAKFAST ────
@@ -183,12 +188,22 @@ export const menuItems: MenuItem[] = [
     description: "Toasted bagel with cream cheese, smoked salmon, capers, and dill.",
     price: 350, image: U("photo-1509722747041-616f39b57569"), category: "breakfast", tags: [],
   },
+  {
+    id: "br-5", name: "Buttermilk Pancakes",
+    description: "Fluffy stack with maple syrup, fresh berries, and a melt of salted butter.",
+    price: 290, image: U("photo-1521305916504-4a1121188589"), category: "breakfast", tags: [], isNew: true,
+  },
+  {
+    id: "br-6", name: "Grilled Veggie Sandwich",
+    description: "Roasted peppers, zucchini, pesto, and mozzarella pressed on artisan sourdough.",
+    price: 280, image: U("photo-1539252554453-80ab65ce3586"), category: "breakfast", tags: [], isNew: true,
+  },
 
   // ──── BRUNCH ────
   {
     id: "bru-1", name: "French Toast Royale",
     description: "Brioche French toast with mascarpone, berries, maple syrup, and edible flowers.",
-    price: 380, image: U("photo-1484723091739-30a097e8f929"), category: "brunch", tags: [],
+    price: 380, image: U("photo-1528740561666-dc2479dc08ab"), category: "brunch", tags: [],
   },
   {
     id: "bru-2", name: "Shakshuka",
@@ -199,6 +214,21 @@ export const menuItems: MenuItem[] = [
     id: "bru-3", name: "Mushroom Truffle Omelette",
     description: "Free-range eggs, wild mushrooms, gruyere, and a drizzle of truffle oil.",
     price: 420, image: U("photo-1525351484163-7529414344d8"), category: "brunch", tags: ["gluten-free"],
+  },
+  {
+    id: "bru-4", name: "Classic Smash Burger",
+    description: "Double smashed patties, melted cheddar, house sauce, and pickles in a brioche bun.",
+    price: 360, image: U("photo-1565299624946-b28f40a0ae38"), category: "brunch", tags: [], isNew: true,
+  },
+  {
+    id: "bru-5", name: "Truffle Mushroom Pasta",
+    description: "Hand-tossed tagliatelle in a creamy wild-mushroom truffle sauce with parmesan.",
+    price: 390, image: U("photo-1550547660-d9450f859349"), category: "brunch", tags: [], isNew: true,
+  },
+  {
+    id: "bru-6", name: "Margherita Flatbread",
+    description: "Wood-fired flatbread with San Marzano tomato, fresh mozzarella, and basil.",
+    price: 340, image: U("photo-1567620905732-2d1ec7ab7445"), category: "brunch", tags: [], isNew: true,
   },
 
   // ──── DESSERTS ────
@@ -222,12 +252,17 @@ export const menuItems: MenuItem[] = [
     description: "Dense, creamy cheesecake on a buttery graham crust with berry compote.",
     price: 280, image: U("photo-1533134242443-d4fd215305ad"), category: "desserts", tags: [],
   },
+  {
+    id: "des-5", name: "Belgian Waffle",
+    description: "Crisp golden waffle with whipped cream, chocolate sauce, and fresh strawberries.",
+    price: 260, image: U("photo-1606755962773-d324e0a13086"), category: "desserts", tags: [], isNew: true,
+  },
 
   // ──── VEGAN ────
   {
     id: "veg-1", name: "Oat Milk Latte",
     description: "Our signature espresso with creamy barista oat milk — naturally sweet.",
-    price: 220, image: U("photo-1517701604599-bb29b565090c"), category: "vegan", tags: ["vegan", "hot"],
+    price: 220, image: U("photo-1559056199-641a0ac8b55e"), category: "vegan", tags: ["vegan", "hot"],
   },
   {
     id: "veg-2", name: "Vegan Buddha Bowl",
@@ -254,17 +289,17 @@ export const menuItems: MenuItem[] = [
   {
     id: "spc-2", name: "Rose Cardamom Latte",
     description: "Persian-inspired latte with rose water, ground cardamom, and pistachio dust.",
-    price: 290, image: U("photo-1572442388796-11668a67e53d"), category: "specials", tags: ["hot"], isNew: true,
+    price: 290, image: U("photo-1551030173-122aabc4489c"), category: "specials", tags: ["hot"], isNew: true,
   },
   {
     id: "spc-3", name: "Affogato al Cioccolato",
     description: "Double espresso poured over artisan vanilla gelato with dark chocolate shavings.",
-    price: 310, image: U("photo-1485808191679-5f86510681a2"), category: "specials", tags: ["cold"],
+    price: 310, image: U("photo-1568649929103-28ffbefaca1e"), category: "specials", tags: ["cold"],
   },
   {
     id: "spc-4", name: "Saffron Honey Latte",
     description: "Warm milk steeped with Kashmiri saffron, raw honey, and a dash of cinnamon.",
-    price: 320, image: U("photo-1578314675249-a6910f80cc4e"), category: "specials", tags: ["hot", "organic"], isNew: true,
+    price: 320, image: U("photo-1626074353765-517a681e40be"), category: "specials", tags: ["hot", "organic"], isNew: true,
   },
   {
     id: "spc-5", name: "Lavender Oat Cortado",
