@@ -1,13 +1,13 @@
 TEAM PHOTOS
 ===========
-Drop the three member photos here with these EXACT filenames:
+Save the three member photos in THIS folder with these exact names (in order):
 
-  sai-santhosh.jpg   →  SAI SANTHOSH
-  cindy.jpg          →  CINDY
-  sushmeetha.jpg     →  SUSHMEETHA
+  1.jpg   →  SAI SANTHOSH
+  2.jpg   →  CINDY
+  3.jpg   →  SUSHMEETHA
 
-Recommended: square-ish or 3:4 portrait, at least 600x800px, JPG or PNG
-(if PNG, also update the extension in src/app/about/page.tsx).
+Tip: right-click each photo > Save As > into this folder > name it 1, 2, or 3 (.jpg).
+Phone photos are usually .jpg already. Recommended size: at least 600x800px.
 
-Until a photo is added, the site shows an elegant gold-initials placeholder
-in its place — nothing breaks.
+Until a photo is added, the site shows an elegant gold-initials placeholder —
+nothing breaks. After adding them, they auto-appear on the About page.
