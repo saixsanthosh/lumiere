@@ -16,7 +16,7 @@ const categories = [
   {
     title: "Pastries & Breakfast",
     description: "Freshly baked croissants, avocado toast, and more",
-    image: "https://images.unsplash.com/photo-1509365390695-33aee754301f?auto=format&fit=crop&w=600&q=80",
+    image: "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?auto=format&fit=crop&w=600&q=80",
     items: 9,
     href: "/menu",
   },

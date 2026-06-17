@@ -150,7 +150,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pas-1", name: "Almond Croissant",
     description: "Buttery, flaky layers filled with frangipane cream and toasted almonds.",
-    price: 150, image: U("photo-1620921575116-fd8902e4f4cf"), category: "pastries", tags: [], bestseller: true,
+    price: 150, image: U("photo-1555507036-ab1f4038808a"), category: "pastries", tags: [], bestseller: true,
   },
   {
     id: "pas-2", name: "Pain au Chocolat",

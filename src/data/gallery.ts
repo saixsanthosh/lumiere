@@ -18,7 +18,7 @@ export const galleryImages: GalleryImage[] = [
 
   // Food
   { id: "g9", src: U("photo-1484723091739-30a097e8f929"), alt: "Artisan breakfast spread on marble table", category: "food" },
-  { id: "g10", src: U("photo-1509365390695-33aee754301f"), alt: "Freshly baked almond croissants", category: "food" },
+  { id: "g10", src: U("photo-1549903072-7e6e0bedb7fb"), alt: "Freshly baked almond croissants", category: "food" },
   { id: "g11", src: U("photo-1541519227354-08fa5d50c44d"), alt: "Avocado toast with microgreens", category: "food" },
   { id: "g12", src: U("photo-1571877227200-a0d98ea607e9"), alt: "Tiramisu dessert with cocoa dusting", category: "food" },
 
