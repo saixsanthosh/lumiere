@@ -48,6 +48,15 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Kill double-tap-to-zoom & the 300ms tap delay on mobile (pinch-zoom kept) */
+  touch-action: manipulation;
+}
+
+/* Stop iOS auto-inflating text on rotate; keep tap highlight subtle */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(201, 162, 75, 0.2);
 }
 
 ::selection {

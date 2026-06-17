@@ -73,7 +73,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "cb-2", name: "Salted Caramel Cold Brew",
     description: "Cold brew swirled with salted caramel and topped with sweet cream foam.",
-    price: 260, image: U("photo-1553909489-cd47e0907980"), category: "cold-brew", tags: ["cold"],
+    price: 260, image: U("photo-1572490122747-3968b75cc699"), category: "cold-brew", tags: ["cold"],
   },
   {
     id: "cb-3", name: "Nitro Cold Brew",
@@ -100,12 +100,12 @@ export const menuItems: MenuItem[] = [
   {
     id: "tea-2", name: "Chai Masala",
     description: "House-blended spices simmered in milk — cardamom, cinnamon, ginger, and clove.",
-    price: 180, image: U("photo-1571934811356-5cc061b6821f"), category: "tea", tags: ["hot"], bestseller: true,
+    price: 180, image: U("photo-1597318181409-cf64d0b5d8a2"), category: "tea", tags: ["hot"], bestseller: true,
   },
   {
     id: "tea-3", name: "Earl Grey Lavender",
     description: "Bergamot-scented black tea with French lavender and a touch of honey.",
-    price: 200, image: U("photo-1536256263959-770b48d82b0a"), category: "tea", tags: ["hot"],
+    price: 200, image: U("photo-1597481499750-3e6b22637e12"), category: "tea", tags: ["hot"],
   },
   {
     id: "tea-4", name: "Iced Peach Green Tea",
@@ -117,7 +117,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "sm-1", name: "Berry Bliss Smoothie",
     description: "Blueberries, strawberries, banana, and Greek yogurt blended to perfection.",
-    price: 280, image: U("photo-1553530666-ba11a7da3888"), category: "smoothies", tags: ["cold", "gluten-free"],
+    price: 280, image: U("photo-1638176066666-ffb2f013c7dd"), category: "smoothies", tags: ["cold", "gluten-free"],
   },
   {
     id: "sm-2", name: "Mango Sunshine",
@@ -137,14 +137,14 @@ export const menuItems: MenuItem[] = [
   {
     id: "sm-5", name: "Strawberry Banana Smoothie",
     description: "Sun-ripe strawberries and banana whipped with creamy yogurt and honey.",
-    price: 280, image: U("photo-1466978913421-dad2ebd01d17"), category: "smoothies", tags: ["cold", "gluten-free"], isNew: true,
+    price: 280, image: U("photo-1502741224143-90386d7f8c82"), category: "smoothies", tags: ["cold", "gluten-free"], isNew: true,
   },
 
   // ──── PASTRIES ────
   {
     id: "pas-1", name: "Almond Croissant",
     description: "Buttery, flaky layers filled with frangipane cream and toasted almonds.",
-    price: 150, image: U("photo-1509365390695-33aee754301f"), category: "pastries", tags: [], bestseller: true,
+    price: 150, image: U("photo-1620921575116-fd8902e4f4cf"), category: "pastries", tags: [], bestseller: true,
   },
   {
     id: "pas-2", name: "Pain au Chocolat",
@@ -154,7 +154,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pas-3", name: "Cinnamon Swirl",
     description: "Warm, gooey cinnamon sugar rolled into soft brioche dough.",
-    price: 140, image: U("photo-1509365465985-25d11c17e812"), category: "pastries", tags: [],
+    price: 140, image: U("photo-1607920591413-4ec007e70023"), category: "pastries", tags: [],
   },
   {
     id: "pas-4", name: "Blueberry Muffin",
@@ -164,7 +164,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "pas-5", name: "Pistachio Danish",
     description: "Flaky pastry filled with pistachio cream and topped with crushed pistachios.",
-    price: 170, image: U("photo-1600271886742-f049cd451bba"), category: "pastries", tags: [],
+    price: 170, image: U("photo-1623334044303-241021148842"), category: "pastries", tags: [],
   },
 
   // ──── BREAKFAST ────
@@ -181,7 +181,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "br-3", name: "Granola Bowl",
     description: "House-made granola with Greek yogurt, seasonal fruits, and honey drizzle.",
-    price: 260, image: U("photo-1484723091739-30a097e8f929"), category: "breakfast", tags: ["gluten-free", "organic"],
+    price: 260, image: U("photo-1517673400267-0251440c45dc"), category: "breakfast", tags: ["gluten-free", "organic"],
   },
   {
     id: "br-4", name: "Smoked Salmon Bagel",
@@ -191,7 +191,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "br-5", name: "Buttermilk Pancakes",
     description: "Fluffy stack with maple syrup, fresh berries, and a melt of salted butter.",
-    price: 290, image: U("photo-1521305916504-4a1121188589"), category: "breakfast", tags: [], isNew: true,
+    price: 290, image: U("photo-1567620905732-2d1ec7ab7445"), category: "breakfast", tags: [], isNew: true,
   },
   {
     id: "br-6", name: "Grilled Veggie Sandwich",
@@ -203,7 +203,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "bru-1", name: "French Toast Royale",
     description: "Brioche French toast with mascarpone, berries, maple syrup, and edible flowers.",
-    price: 380, image: U("photo-1528740561666-dc2479dc08ab"), category: "brunch", tags: [],
+    price: 380, image: U("photo-1484723091739-30a097e8f929"), category: "brunch", tags: [],
   },
   {
     id: "bru-2", name: "Shakshuka",
@@ -218,17 +218,17 @@ export const menuItems: MenuItem[] = [
   {
     id: "bru-4", name: "Classic Smash Burger",
     description: "Double smashed patties, melted cheddar, house sauce, and pickles in a brioche bun.",
-    price: 360, image: U("photo-1565299624946-b28f40a0ae38"), category: "brunch", tags: [], isNew: true,
+    price: 360, image: U("photo-1568901346375-23c9450c58cd"), category: "brunch", tags: [], isNew: true,
   },
   {
     id: "bru-5", name: "Truffle Mushroom Pasta",
     description: "Hand-tossed tagliatelle in a creamy wild-mushroom truffle sauce with parmesan.",
-    price: 390, image: U("photo-1550547660-d9450f859349"), category: "brunch", tags: [], isNew: true,
+    price: 390, image: U("photo-1551183053-bf91a1d81141"), category: "brunch", tags: [], isNew: true,
   },
   {
     id: "bru-6", name: "Margherita Flatbread",
     description: "Wood-fired flatbread with San Marzano tomato, fresh mozzarella, and basil.",
-    price: 340, image: U("photo-1567620905732-2d1ec7ab7445"), category: "brunch", tags: [], isNew: true,
+    price: 340, image: U("photo-1574071318508-1cdbab80d002"), category: "brunch", tags: [], isNew: true,
   },
 
   // ──── DESSERTS ────
@@ -255,7 +255,7 @@ export const menuItems: MenuItem[] = [
   {
     id: "des-5", name: "Belgian Waffle",
     description: "Crisp golden waffle with whipped cream, chocolate sauce, and fresh strawberries.",
-    price: 260, image: U("photo-1606755962773-d324e0a13086"), category: "desserts", tags: [], isNew: true,
+    price: 260, image: U("photo-1562376552-0d160a2f238d"), category: "desserts", tags: [], isNew: true,
   },
 
   // ──── VEGAN ────
@@ -272,12 +272,12 @@ export const menuItems: MenuItem[] = [
   {
     id: "veg-3", name: "Coconut Chia Pudding",
     description: "Overnight chia seeds in coconut milk with mango and passion fruit.",
-    price: 220, image: U("photo-1490474418585-ba9bad8fd0ea"), category: "vegan", tags: ["vegan", "gluten-free"],
+    price: 220, image: U("photo-1590080875515-8a3a8dc5735e"), category: "vegan", tags: ["vegan", "gluten-free"],
   },
   {
     id: "veg-4", name: "Acai Bowl",
     description: "Blended acai, banana, granola, coconut flakes, and fresh berries.",
-    price: 340, image: U("photo-1590301157890-4810ed352733"), category: "vegan", tags: ["vegan", "gluten-free", "organic"],
+    price: 340, image: U("photo-1511690656952-34342bb7c2f2"), category: "vegan", tags: ["vegan", "gluten-free", "organic"],
   },
 
   // ──── SPECIALS ────

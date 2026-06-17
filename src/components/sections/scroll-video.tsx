@@ -58,9 +58,13 @@ export default function ScrollVideo() {
   const readyRef = useRef(false);
   const [srcIndex, setSrcIndex] = useState(0);
   const [reduced, setReduced] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setReduced(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    // On touch / small screens, scrubbing a video per-frame is janky — let it
+    // simply autoplay-loop instead, while captions still reveal on scroll.
+    setIsMobile(window.matchMedia("(max-width: 768px), (pointer: coarse)").matches);
   }, []);
 
   // One rAF loop (active only while on-screen) drives EVERYTHING from a
@@ -80,9 +84,9 @@ export default function ScrollVideo() {
       const denom = rect.height - window.innerHeight;
       const progress = denom > 0 ? Math.max(0, Math.min(1, -rect.top / denom)) : 0;
 
-      // Video scrub (smoothed)
+      // Video scrub (smoothed) — desktop only; mobile autoplay-loops instead.
       const video = videoRef.current;
-      if (video) {
+      if (video && !isMobile) {
         const dur = video.duration || 0;
         if (dur && readyRef.current) {
           const tgt = progress * dur;
@@ -145,7 +149,7 @@ export default function ScrollVideo() {
       cancelAnimationFrame(raf);
       io.disconnect();
     };
-  }, [reduced]);
+  }, [reduced, isMobile]);
 
   const handleError = () =>
     setSrcIndex((i) => (i < VIDEO_SOURCES.length - 1 ? i + 1 : i));
@@ -153,7 +157,7 @@ export default function ScrollVideo() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[260vh] md:h-[340vh] bg-espresso"
+      className="relative h-[200vh] md:h-[340vh] bg-espresso"
       aria-label="The Lumière craft, told through film"
     >
       <div className="sticky top-0 h-[100svh] overflow-hidden">
@@ -173,6 +177,8 @@ export default function ScrollVideo() {
               playsInline
               preload="auto"
               poster={POSTER}
+              autoPlay={isMobile}
+              loop={isMobile}
               onLoadedData={() => (readyRef.current = true)}
               onCanPlay={() => (readyRef.current = true)}
               onError={handleError}
