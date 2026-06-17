@@ -101,6 +101,26 @@ export default function ContactPage() {
               </div>
             </AnimateOnScroll>
 
+            {/* QR Menu */}
+            <AnimateOnScroll delay={0.15}>
+              <div className="flex items-center gap-5 rounded-lg bg-roasted p-5 border border-[rgba(201,162,75,0.08)]">
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=10&bgcolor=2E1D11&color=E8C97A&data=https%3A%2F%2Flumiere-nine-omega.vercel.app%2Fmenu"
+                  alt="Scan to view the Lumière menu"
+                  width={96}
+                  height={96}
+                  className="h-24 w-24 shrink-0 rounded-md"
+                />
+                <div>
+                  <p className="font-heading text-lg text-cream">Scan our menu</p>
+                  <p className="mt-1 text-sm font-body text-text-muted-dark leading-relaxed">
+                    Point your camera at the code to browse the full Lumière menu
+                    and order — perfect for the table.
+                  </p>
+                </div>
+              </div>
+            </AnimateOnScroll>
+
             {/* Built By Card */}
             <AnimateOnScroll delay={0.2}>
               <div className="bg-roasted rounded-lg p-5 border border-caramel/10">

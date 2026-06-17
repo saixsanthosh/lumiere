@@ -14,6 +14,7 @@ import InstagramFeed from "@/components/sections/instagram-feed";
 import Newsletter from "@/components/sections/newsletter";
 import ReservationCTA from "@/components/sections/reservation-cta";
 import DeliveryPartners from "@/components/sections/delivery-partners";
+import FAQ from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <ReservationCTA />
       <DeliveryPartners />
       <InstagramFeed />
+      <FAQ />
       <Newsletter />
     </>
   );

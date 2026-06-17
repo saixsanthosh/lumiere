@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { ArrowLeft, ArrowRight, ShoppingBag, Star } from "lucide-react";
+import BlurText from "@/components/shared/blur-text";
 import { menuItems } from "@/data/menu";
 import { useCartStore } from "@/store/cart-store";
 import { useToastStore } from "@/store/toast-store";
@@ -98,8 +99,8 @@ export default function SignatureCarousel() {
         <span className="font-body text-xs uppercase tracking-[0.35em] text-caramel">
           Crowd Favourites
         </span>
-        <h2 className="mt-3 font-display text-4xl font-light text-cream md:text-6xl">
-          Signature Series
+        <h2 className="mt-3 flex justify-center font-display text-4xl font-light text-cream md:text-6xl">
+          <BlurText text="Signature Series" />
         </h2>
       </div>
 

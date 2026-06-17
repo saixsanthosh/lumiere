@@ -91,6 +91,12 @@ export const menuItems: MenuItem[] = [
     price: 230, image: U("photo-1517701550927-30cf4ba1dba5"), category: "cold-brew", tags: ["cold"],
   },
 
+  {
+    id: "cb-6", name: "Iced Spanish Latte",
+    description: "Bold espresso over ice, sweetened with condensed milk for a smooth, caramel finish.",
+    price: 250, image: U("photo-1517959105821-eaf2591984ca"), category: "cold-brew", tags: ["cold"], isNew: true,
+  },
+
   // ──── TEA ────
   {
     id: "tea-1", name: "Matcha Latte",
@@ -167,6 +173,12 @@ export const menuItems: MenuItem[] = [
     price: 170, image: U("photo-1623334044303-241021148842"), category: "pastries", tags: [],
   },
 
+  {
+    id: "pas-6", name: "Chocolate Chip Cookie",
+    description: "Warm, gooey cookie loaded with molten dark-chocolate chunks and a sea-salt finish.",
+    price: 120, image: U("photo-1499636136210-6f4ee915583e"), category: "pastries", tags: [], isNew: true,
+  },
+
   // ──── BREAKFAST ────
   {
     id: "br-1", name: "Avocado Toast",
@@ -197,6 +209,12 @@ export const menuItems: MenuItem[] = [
     id: "br-6", name: "Grilled Veggie Sandwich",
     description: "Roasted peppers, zucchini, pesto, and mozzarella pressed on artisan sourdough.",
     price: 280, image: U("photo-1539252554453-80ab65ce3586"), category: "breakfast", tags: [], isNew: true,
+  },
+
+  {
+    id: "br-7", name: "Chicken Club Sandwich",
+    description: "Triple-stacked grilled chicken, crispy bacon, lettuce, tomato, and herb mayo.",
+    price: 340, image: U("photo-1528735602780-2552fd46c7af"), category: "breakfast", tags: [], isNew: true,
   },
 
   // ──── BRUNCH ────
@@ -231,6 +249,12 @@ export const menuItems: MenuItem[] = [
     price: 340, image: U("photo-1574071318508-1cdbab80d002"), category: "brunch", tags: [], isNew: true,
   },
 
+  {
+    id: "bru-7", name: "Caesar Salad",
+    description: "Crisp romaine, shaved parmesan, garlic croutons, and creamy Caesar dressing.",
+    price: 300, image: U("photo-1550304943-4f24f54ddde9"), category: "brunch", tags: [], isNew: true,
+  },
+
   // ──── DESSERTS ────
   {
     id: "des-1", name: "Tiramisu",
@@ -256,6 +280,17 @@ export const menuItems: MenuItem[] = [
     id: "des-5", name: "Belgian Waffle",
     description: "Crisp golden waffle with whipped cream, chocolate sauce, and fresh strawberries.",
     price: 260, image: U("photo-1562376552-0d160a2f238d"), category: "desserts", tags: [], isNew: true,
+  },
+
+  {
+    id: "des-6", name: "Fudge Brownie",
+    description: "Dense, fudgy dark-chocolate brownie served warm with a scoop of vanilla gelato.",
+    price: 190, image: U("photo-1610450949065-1f2841536c88"), category: "desserts", tags: [], isNew: true,
+  },
+  {
+    id: "des-7", name: "Red Velvet Slice",
+    description: "Velvety cocoa sponge layered with tangy cream-cheese frosting.",
+    price: 240, image: U("photo-1586788680434-30d324b2d46f"), category: "desserts", tags: [], isNew: true,
   },
 
   // ──── VEGAN ────
