@@ -262,8 +262,8 @@ export const menuItems: MenuItem[] = [
     price: 280, image: U("photo-1571877227200-a0d98ea607e9"), category: "desserts", tags: [], bestseller: true,
   },
   {
-    id: "des-2", name: "Creme Brulee",
-    description: "Classic vanilla custard with a perfectly caramelized sugar crust.",
+    id: "des-2", name: "French Macarons",
+    description: "Delicate almond-meringue shells with silky ganache filling — a rainbow of flavours.",
     price: 260, image: U("photo-1470124182917-cc6e71b22ecc"), category: "desserts", tags: ["gluten-free"],
   },
   {
